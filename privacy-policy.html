@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy | Bite AI</title>
+  <link rel="icon" type="image/png" href="icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --black: #0D0D0D;
+      --white: #FFFFFF;
+      --gray: #F5F5F3;
+      --gray-mid: #E8E8E5;
+      --gray-text: #888884;
+      --green: #22C55E;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--gray);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 48px;
+      background: rgba(245,245,243,0.92);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      transition: padding 0.3s;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-weight: 800;
+      font-size: 32px;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .nav-logo img { width: 40px; height: 40px; border-radius: 10px; object-fit: cover; }
+
+    .nav-center { display: flex; flex-direction: row; align-items: center; gap: 36px; list-style: none; }
+
+    .nav-center a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-center a:hover { color: var(--black); }
+
+    .nav-right { display: flex; align-items: center; }
+
+    .nav-play-badge { height: 40px; display: block; transition: opacity 0.2s, transform 0.2s; }
+    .nav-play-badge:hover { opacity: 0.8; transform: translateY(-1px); }
+
+    /* ── CONTENT ── */
+    .doc-wrapper {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 140px 48px 100px;
+    }
+
+    .doc-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 16px;
+    }
+
+    .doc-label::before { content: ''; width: 24px; height: 2px; background: var(--green); border-radius: 1px; }
+
+    h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1.1;
+      color: var(--black);
+      margin-bottom: 12px;
+    }
+
+    .last-updated {
+      font-size: 14px;
+      color: var(--gray-text);
+      margin-bottom: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1.5px solid var(--gray-mid);
+    }
+
+    .intro {
+      font-size: 16px;
+      color: var(--gray-text);
+      margin-bottom: 48px;
+      line-height: 1.8;
+    }
+
+    h2 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--black);
+      margin-top: 48px;
+      margin-bottom: 16px;
+    }
+
+    h3 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--black);
+      margin-top: 28px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 15px;
+      color: #555;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+
+    ul {
+      margin: 12px 0 20px 0;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    ul li {
+      font-size: 15px;
+      color: #555;
+      line-height: 1.7;
+    }
+
+    .highlight-box {
+      background: var(--white);
+      border: 1.5px solid var(--gray-mid);
+      border-radius: 16px;
+      padding: 24px 28px;
+      margin: 24px 0;
+    }
+
+    .highlight-box p { margin-bottom: 0; }
+
+    strong { color: var(--black); font-weight: 600; }
+
+    .contact-box {
+      background: var(--black);
+      border-radius: 20px;
+      padding: 32px 36px;
+      margin-top: 48px;
+    }
+
+    .contact-box h2 { color: white; margin-top: 0; }
+    .contact-box p { color: rgba(255,255,255,0.6); margin-bottom: 8px; }
+    .contact-box a { color: var(--green); text-decoration: none; font-weight: 600; }
+    .contact-box a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--gray);
+      border-top: 1.5px solid var(--gray-mid);
+      padding: 56px 48px 36px;
+    }
+
+    .footer-inner { max-width: 1300px; margin: 0 auto; }
+
+    .footer-top {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 48px;
+      gap: 48px;
+    }
+
+    .footer-brand-col { display: flex; flex-direction: column; gap: 24px; }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--black);
+      text-decoration: none;
+    }
+
+    .footer-brand img { width: 36px; height: 36px; border-radius: 10px; object-fit: cover; }
+
+    .footer-download-label {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--gray-text);
+      margin-bottom: 12px;
+    }
+
+    .footer-badge { height: 48px; display: block; transition: opacity 0.2s; }
+    .footer-badge:hover { opacity: 0.75; }
+
+    .footer-links-group h4 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gray-text);
+      margin-bottom: 16px;
+    }
+
+    .footer-links-group ul { list-style: none; display: flex; flex-direction: column; gap: 10px; padding-left: 0; margin: 0; }
+
+    .footer-links-group a {
+      font-family: 'Outfit', sans-serif;
+      font-size: 14px;
+      color: var(--gray-text);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links-group a:hover { color: var(--black); }
+
+    .footer-bottom {
+      border-top: 1.5px solid var(--gray-mid);
+      padding-top: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-family: 'Outfit', sans-serif;
+      font-size: 13px;
+      color: var(--gray-text);
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 12px 24px; }
+      .nav-center { display: none; }
+      .doc-wrapper { padding: 120px 24px 80px; }
+      .footer-top { flex-direction: column; gap: 32px; }
+      .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+      footer { padding: 56px 24px 36px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="index.html" class="nav-logo">
+      <img src="logo.png" alt="Bite AI" />
+      Bite AI
+    </a>
+    <ul class="nav-center">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="index.html#how">How it works</a></li>
+      <li><a href="index.html#features">Features</a></li>
+      <li><a href="index.html#why">Why Bite AI</a></li>
+    </ul>
+    <div class="nav-right">
+      <a href="index.html#download">
+        <img src="google-play-badge.png" alt="Get it on Google Play" class="nav-play-badge" />
+      </a>
+    </div>
+  </nav>
+
+  <!-- CONTENT -->
+  <div class="doc-wrapper">
+
+    <div class="doc-label">Legal</div>
+    <h1>Privacy Policy</h1>
+    <p class="last-updated">Last Updated: March 21, 2026</p>
+
+    <p class="intro">This Privacy Policy describes how Bite AI collects, uses, stores, and protects your information when you use the Bite AI mobile application and related services. By using the Service, you agree to the practices described in this Policy.</p>
+
+    <h2>1. Who We Are</h2>
+    <p>Bite AI is an independent mobile application developed and operated by <strong>Gonzalo Sebastián Vázquez</strong>, an individual developer based in Argentina. Bite AI is not a registered company. For any privacy-related inquiries, contact us at <a href="mailto:gon.vazquez.mail@gmail.com" style="color: var(--black); font-weight: 600;">gon.vazquez.mail@gmail.com</a>.</p>
+
+    <h2>2. Information We Collect</h2>
+
+    <h3>2.1 Information You Provide</h3>
+    <p>When you create an account or use the Service, we collect:</p>
+    <ul>
+      <li>Your name and email address (via Google Sign-In)</li>
+      <li>Your Google profile photo (displayed in your account)</li>
+    </ul>
+
+    <h3>2.2 Meal Photos and Food Data</h3>
+    <p>To provide the core functionality of the Service, we collect:</p>
+    <ul>
+      <li>Photos of meals you choose to scan through the Application</li>
+      <li>AI-generated health scores, nutritional metrics, and verdicts associated with your scans</li>
+      <li>Meal names, timestamps, and scan history</li>
+    </ul>
+    <p>Meal photos are stored in Google Firebase Storage and are linked to your account to provide a persistent scan history. You may delete individual meals or your entire account at any time through the app.</p>
+
+    <h3>2.3 Usage Data</h3>
+    <p>We may automatically collect basic usage data including:</p>
+    <ul>
+      <li>Device type and operating system version</li>
+      <li>App version</li>
+      <li>Crash reports and error logs</li>
+      <li>General usage patterns to improve the Service</li>
+    </ul>
+
+    <h2>3. How We Use Your Information</h2>
+    <ul>
+      <li><strong>To provide the Service:</strong> Analyzing meal photos, generating health scores, and displaying your scan history</li>
+      <li><strong>To manage your account:</strong> Authentication, account management, and personalization</li>
+      <li><strong>To improve the Service:</strong> Understanding usage patterns and fixing bugs</li>
+      <li><strong>To process payments:</strong> Managing subscription status via Google Play and RevenueCat</li>
+      <li><strong>To respond to you:</strong> Addressing support requests or questions you send us</li>
+    </ul>
+
+    <div class="highlight-box">
+      <p><strong>We do not sell your personal data.</strong> We do not use your meal photos or personal information for advertising purposes or share them with third parties for marketing.</p>
+    </div>
+
+    <h2>4. How We Share Your Information</h2>
+
+    <h3>4.1 Service Providers</h3>
+    <p>We rely on the following third-party services to operate the Application:</p>
+    <ul>
+      <li><strong>Google Firebase</strong> — authentication, database (Firestore), and photo storage (Firebase Storage)</li>
+      <li><strong>OpenAI</strong> — AI analysis of meal photos (images are sent to OpenAI's API for processing)</li>
+      <li><strong>Google Sign-In</strong> — account authentication</li>
+      <li><strong>RevenueCat</strong> — subscription and billing management</li>
+      <li><strong>Google Play</strong> — app distribution and payment processing</li>
+    </ul>
+    <p>Each of these providers has their own privacy policy governing their data practices.</p>
+
+    <h3>4.2 Legal Requirements</h3>
+    <p>We may disclose your information if required to do so by law or in response to valid legal requests by public authorities.</p>
+
+    <h3>4.3 Business Transfers</h3>
+    <p>In the unlikely event that the Service is transferred or acquired, your information may be transferred as part of that transaction. You will be notified of any such change.</p>
+
+    <h2>5. Meal Photos and OpenAI</h2>
+    <p>When you scan a meal, the photo is sent to OpenAI's API for AI-powered analysis. OpenAI processes this image to generate your health score and nutritional breakdown. Only the image is transmitted — your identity is not shared with OpenAI.</p>
+    <p>After analysis, the photo is stored in your personal Firebase Storage bucket, accessible only to your account. We do not use your meal photos to train AI models or share them publicly.</p>
+
+    <h2>6. Data Retention</h2>
+    <ul>
+      <li><strong>Meal photos and scan history</strong> — retained until you delete individual meals or your account</li>
+      <li><strong>Account information</strong> — retained until you delete your account</li>
+      <li><strong>Usage data</strong> — retained for a shorter period for analytical and security purposes</li>
+    </ul>
+    <p>When you delete your account through the app, we delete your account data and meal history. Some residual data may persist in backups for a limited period.</p>
+
+    <h2>7. Your Rights</h2>
+    <p>You have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of the personal data we hold about you</li>
+      <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+      <li><strong>Deletion:</strong> Delete your account and associated data directly through the app, or by contacting us</li>
+      <li><strong>Portability:</strong> Request your data in a portable format</li>
+      <li><strong>Objection:</strong> Object to certain processing of your data</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at <a href="mailto:gon.vazquez.mail@gmail.com" style="color: var(--black); font-weight: 600;">gon.vazquez.mail@gmail.com</a>.</p>
+
+    <h2>8. Data Security</h2>
+    <p>We take reasonable measures to protect your personal data, including the use of secure cloud infrastructure provided by Google Firebase. However, no system is completely secure, and we cannot guarantee the absolute security of your information. You are responsible for maintaining the security of your Google account credentials.</p>
+
+    <h2>9. Children's Privacy</h2>
+    <p>The Service is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child under 13 has provided us with personal information, please contact us and we will take steps to delete it.</p>
+
+    <h2>10. International Data Transfers</h2>
+    <p>As an app operated from Argentina using cloud services based in the United States, your data may be transferred to and processed in countries other than your own. By using the Service, you consent to this transfer. We rely on the data protection practices of our service providers (Google, OpenAI, RevenueCat) to safeguard data during international transfers.</p>
+
+    <h2>11. Third-Party Links</h2>
+    <p>The Service may contain links to third-party websites or services. We are not responsible for the privacy practices of those third parties and encourage you to review their privacy policies independently.</p>
+
+    <h2>12. Changes to This Privacy Policy</h2>
+    <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last Updated" date at the top of this page. For material changes, we will make reasonable efforts to notify you through the Application. Your continued use of the Service after any changes constitutes your acceptance of the updated Policy.</p>
+
+    <div class="contact-box">
+      <h2>Contact Us</h2>
+      <p>If you have any questions or requests regarding this Privacy Policy or your personal data, please contact us:</p>
+      <a href="mailto:gon.vazquez.mail@gmail.com">gon.vazquez.mail@gmail.com</a>
+    </div>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-top">
+        <div class="footer-brand-col">
+          <a href="index.html" class="footer-brand">
+            <img src="logo.png" alt="Bite AI" />
+            Bite AI
+          </a>
+          <div>
+            <div class="footer-download-label">Download Bite AI</div>
+            <a href="index.html#download">
+              <img src="google-play-badge.png" alt="Get it on Google Play" class="footer-badge" />
+            </a>
+          </div>
+        </div>
+        <div class="footer-links-group">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="index.html#how">How it works</a></li>
+            <li><a href="index.html#features">Features</a></li>
+            <li><a href="index.html#why">Why Bite AI</a></li>
+            <li><a href="index.html#download">Download</a></li>
+          </ul>
+        </div>
+        <div class="footer-links-group">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms-and-conditions.html">Terms & Conditions</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 Bite AI. All rights reserved.</span>
+        <span>Not medical advice. Results may vary.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', () => {
+      const nav = document.querySelector('nav');
+      nav.style.padding = window.scrollY > 50 ? '5px 48px' : '8px 48px';
+    });
+  </script>
+
+</body>
+</html>
